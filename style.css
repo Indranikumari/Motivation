@@ -1,0 +1,167 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('success.jpg');
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgba(0, 102, 204, 0.8);
+    text-align: center;
+    padding: 30px;
+    border-bottom: 5px solid #f39c12;
+}
+
+h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px #f39c12;
+}
+
+section {
+    margin: 30px;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 102, 204, 0.8);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f39c12;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+button {
+    background-color: #27ae60;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2ecc71;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    section {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    ul {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    footer {
+        font-size: 0.9em;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    section {
+        margin: 5px;
+        padding: 10px;
+    }
+    
+    #date-section {
+        text-align: center;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 15px;
+        color: #f39c12; /* Bright color for text */
+        font-size: 2em; /* Increase font size */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease;
+    }
+    
+    #date-section:hover {
+        transform: scale(1.05);
+    }
+    
+    #currentDateTime {
+        font-weight: bold;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+    
+    #currentDate {
+        margin-bottom: 10px; /* Space between date and time */
+    }
+    
+    #currentTime {
+        animation: fadeIn 1s;
+    }
+    
+    /* Keyframes for fade-in animation */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    /* Keyframes for fade-in animation */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+
+    ul {
+        font-size: 0.9em;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    footer {
+        font-size: 0.8em;
+        padding: 10px;
+    }
+}
+
