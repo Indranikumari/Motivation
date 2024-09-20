@@ -94,6 +94,35 @@ addGoalBtn.addEventListener('click', () => {
 
 // Initial load
 displayGoals();
+// Focus Timer
+let startTime;
+let interval;
+
+const startBtn = document.getElementById('startBtn');
+const stopBtn = document.getElementById('stopBtn');
+const focusTimeDisplay = document.getElementById('focusTime');
+
+startBtn.addEventListener('click', () => {
+    startTime = new Date();
+    interval = setInterval(updateFocusTime, 1000);
+    startBtn.disabled = true;
+    stopBtn.disabled = false;
+});
+
+stopBtn.addEventListener('click', () => {
+    clearInterval(interval);
+    startBtn.disabled = false;
+    stopBtn.disabled = true;
+});
+
+function updateFocusTime() {
+    const now = new Date();
+    const elapsed = new Date(now - startTime);
+    const hours = String(elapsed.getUTCHours()).padStart(2, '0');
+    const minutes = String(elapsed.getUTCMinutes()).padStart(2, '0');
+    const seconds = String(elapsed.getUTCSeconds()).padStart(2, '0');
+    focusTimeDisplay.textContent = `${hours}:${minutes}:${seconds}`; 
+}
 function updateDateTime() {
     const now = new Date();
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
